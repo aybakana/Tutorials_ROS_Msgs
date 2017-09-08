@@ -85,9 +85,6 @@ void gridcellCallback(const geometry_msgs::GridCellsidCells::ConstPtr& grid_cell
 
 int main(int argc, char **argv)
 {
-  // ros::init_options::AnonymousName will add a unique identifier to the end of your node name.  This allows
-  // multiple of the same executable to be run without remapping each of their names with
-  // __name:=X
   ros::init(argc, argv, "geometry_msgs_listener");
   ros::NodeHandle n;
   ros::Subscriber subpoint = n.subscribe("point_", 1000, pointCallback);
